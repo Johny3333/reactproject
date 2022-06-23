@@ -26,7 +26,6 @@ const Header = () => {
         <Navbar.Brand>
           <Link to="/">Shopping Cart</Link>
         </Navbar.Brand>
-        {useLocation().pathname.split("/")[1] !== "cart" && (
           <Navbar.Text className="search">
             <FormControl
               style={{ width: 500 }}
@@ -39,7 +38,7 @@ const Header = () => {
                   type: "FILTER_BY_SEARCH",
                   payload: e.target.value,
                 });
-              }}
+              }
             />
           </Navbar.Text>
         )}
